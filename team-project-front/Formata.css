@@ -60,8 +60,8 @@ body {
 .logo-header {
   position: absolute;
   left: 20px;
-  width: 120px;
-  height: auto;
+  width: 200px;
+  height: 100px;
 }
 
 .botao-enter {
