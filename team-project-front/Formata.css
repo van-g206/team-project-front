@@ -57,11 +57,14 @@ body {
   text-decoration: none;
 }
 
-.logo-header {
+.logo{
   position: absolute;
-  left: 20px;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 200px;
-  height: 100px;
+  height: auto;
+  display: block;
 }
 
 .botao-enter {
@@ -75,4 +78,8 @@ body {
   background-color: #00C2A8;
   color: #041F2A;
   font-weight: 750;
+}
+.botao-enter:hover {
+  background-color: #0d6057;
+  cursor: pointer;
 }
