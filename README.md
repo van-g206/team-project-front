@@ -1,7 +1,7 @@
 # team-project-front
 # LYTOS — Laboratory of Yield, Technology, Operations & Systems
 
-Site institucional do **LYTOS**, uma página de laboratório fictício de pesquisa e desenvolvimento focado em **robótica, inteligência artificial e automação de alta performance**. O projeto está sendo desenvolvido como trabalho em equipe para a faculdade.
+Site institucional do **LYTOS**, uma página de laboratório fictício de pesquisa e desenvolvimento focado em **robótica, inteligência artificial e automação de alta performance**. O projeto está sendo desenvolvido como trabalho em equipe para a matéria de Front-End.
 
 ## Sobre o projeto
 
@@ -25,8 +25,6 @@ O design foi todo prototipado no Figma antes da implementação, servindo como g
 - **CSS3**
 - **JavaScript**
 
-> Projeto 100% front-end, construído com tecnologias puras (vanilla), sem frameworks, bibliotecas externas, backend ou banco de dados.
-
 ## Funcionalidades planejadas
 
 - [x] Estrutura base do HTML e header com navegação
@@ -43,6 +41,6 @@ O design foi todo prototipado no Figma antes da implementação, servindo como g
 
 Projeto desenvolvido em grupo por alunos da faculdade:
 
-- Lucas Fares Corrêa Auad Pereira
-- Vanessa Thamiris Machado de Oliveira
-- Rebeca Midena de Matos
+- [Lucas Fares Corrêa Auad Pereira]("linkedin.com/in/lucas-fares-c")
+- [Vanessa Thamiris Machado de Oliveira]("linkedin.com/in/vanessa-thamiris-machado-de-oliveira")
+- [Rebeca Midena de Matos]("linkedin.com/in/rebeca-midena")
