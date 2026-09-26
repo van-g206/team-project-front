@@ -1,0 +1,28 @@
+#inicio{
+    height: 100vh;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+p.titulo{
+    color: #00C2A8;
+    font-size: 12px;
+}
+h1.robotica{
+    color: white;
+}
+h1.inteligente{
+    color: #00C2A8;
+}
+h1.futuro{
+    color: #1e566d;
+}
+.botao-produtos{
+    position: absolute;
+    height: 35px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: #00C2A8;
+    color: #041F2A;
+    font-weight: 750;
+}
