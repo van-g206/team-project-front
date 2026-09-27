@@ -23,7 +23,7 @@ h1.futuro{
     width: 160px;
     padding: 0 12px;
     box-sizing: border-box;
-    border-radius: 999px;
+    border-radius: 99px;
     background-color: #00C2A8;
     color: #041F2A;
     font-weight: 800;
@@ -38,7 +38,7 @@ h1.futuro{
     background-color: #63f0dd;
 }
 .botao-produtos .seta {
-    color: #041F2A;
+    color: #041F2A;                         
     font-size: 20px;
     font-weight: 400;
     display: inline-block;
