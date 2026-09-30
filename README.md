@@ -30,6 +30,6 @@ O design foi todo prototipado no Figma antes da implementação, servindo como g
 
 Projeto desenvolvido em grupo por alunos da faculdade:
 
-- [Lucas Fares Corrêa Auad Pereira]("[https://www.linkedin.com/in/lucas-fares-c/?isSelfProfile=false]")
-- [Vanessa Thamiris Machado de Oliveira]("[https://www.linkedin.com/in/vanessa-thamiris-machado-de-oliveira/?isSelfProfile=true]")
-- [Rebeca Midena de Matos]("[(https://www.linkedin.com/in/rebeca-midena/?isSelfProfile=false)]")
+- [Lucas Fares Corrêa Auad Pereira]("https://www.linkedin.com/in/lucas-fares-c/?isSelfProfile=false")
+- [Vanessa Thamiris Machado de Oliveira]("https://www.linkedin.com/in/vanessa-thamiris-machado-de-oliveira/?isSelfProfile=true")
+- [Rebeca Midena de Matos]("(https://www.linkedin.com/in/rebeca-midena/?isSelfProfile=false)")
