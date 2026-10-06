@@ -24,23 +24,12 @@ O design foi todo prototipado no Figma antes da implementação, servindo como g
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-
-## Funcionalidades planejadas
-
-- [x] Estrutura base do HTML e header com navegação
-- [x] Identidade visual (grid de fundo, cores e tipografia)
-- [ ] Seção "Início" com apresentação do laboratório
-- [ ] Seção "Produtos"
-- [ ] Seção "Tecnologia"
-- [ ] Seção "Sobre"
-- [ ] Seção "Contato"
-- [ ] Tela de login/acesso a conteúdos exclusivos (interface visual, sem autenticação real)
-- [ ] Responsividade (mobile/tablet)
+- 
 
 ## 👥 Equipe
 
 Projeto desenvolvido em grupo por alunos da faculdade:
 
-- [Lucas Fares Corrêa Auad Pereira]("linkedin.com/in/lucas-fares-c")
-- [Vanessa Thamiris Machado de Oliveira]("linkedin.com/in/vanessa-thamiris-machado-de-oliveira")
-- [Rebeca Midena de Matos]("linkedin.com/in/rebeca-midena")
+- [Lucas Fares Corrêa Auad Pereira](https://www.linkedin.com/in/lucas-fares-c/?isSelfProfile=false)
+- [Vanessa Thamiris Machado de Oliveira](https://www.linkedin.com/in/vanessa-thamiris-machado-de-oliveira/?isSelfProfile=true)
+- [Rebeca Midena de Matos](https://www.linkedin.com/in/rebeca-midena/?isSelfProfile=false)
