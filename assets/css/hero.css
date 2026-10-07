@@ -1,24 +1,36 @@
-#inicio{
-    height: 100vh;
+#inicio {
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     margin-left: 20px;
     margin-top: 50px;
 }
-p.titulo{
+
+p.titulo {
     color: #00C2A8;
     font-size: 12px;
 }
-h1.robotica{
+
+h1.robotica {
     color: white;
 }
-h1.inteligente{
+
+h1.inteligente {
     color: #00C2A8;
 }
-h1.futuro{
+
+h1.futuro {
     color: #1e566d;
 }
+
+.hero-botoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 .botao-produtos {
-    position: relative;
     height: 52px;
     width: 160px;
     padding: 0 12px;
@@ -32,13 +44,14 @@ h1.futuro{
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-top: 20px;
 }
+
 .botao-produtos:hover {
     background-color: #63f0dd;
 }
+
 .botao-produtos .seta {
-    color: #041F2A;                         
+    color: #041F2A;
     font-size: 20px;
     font-weight: 400;
     display: inline-block;
@@ -46,29 +59,48 @@ h1.futuro{
     transform-origin: left center;
     line-height: 1;
 }
+
+/* Botão Sobre */
 .botao-sobre {
-    position: relative;
     height: 52px;
     width: 160px;
-    left: 10px;
     padding: 0 12px;
     box-sizing: border-box;
     border-radius: 99px;
+
     background-color: #fdfefe1a;
-    border: solid 0.5px;
-    border-color: rgba(255, 255, 255, 0.324);
+    border: 0.5px solid rgba(255, 255, 255, 0.324);
+
     color: white;
     font-weight: 800;
     text-decoration: none;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
-
 }
-.botao-sobre:hover{
+
+.botao-sobre:hover {
     background-color: #63f0dd67;
 }
 
+/* Estatísticas */
+.estatisticas {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
 
+.estatistica {
+    text-align: left;
+}
+
+.estatistica h2 {
+    color: #00C2A8;
+    margin: 0;
+}
+
+.estatistica p {
+    color: white;
+    margin-top: 5px;
+}
