@@ -9,29 +9,39 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/hero.css">
   <script src="./assets/js/main.js" defer></script>
-<script src="./assets/js/hero.js" defer></script>
+  <script src="./assets/js/hero.js" defer></script>
 </head>
 
 <body>
 
   <header>
-  <div class="header-content">
-    <nav>
-      <img class="logo" src="./assets/img/icons/logo.png" alt="Logo do site">
+    <div class="header-content">
+      <nav>
+        <img class="logo" src="./assets/img/icons/logo.png" alt="Logo do site">
 
-      <div class="menu-links" id="menu-links">
-        <a href="#inicio">Início</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#tecnologia">Tecnologia</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-      </div>
+        <div class="banner-hero" aria-hidden="true">
+          <div class="banner-anel anel-externo"></div>
+          <div class="banner-anel anel-medio"></div>
+          <div class="banner-anel anel-interno"></div>
 
-      <button class="botao-enter">Entrar</button>
-      <button class="botao-menu" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
-    </nav>
-  </div>
-</header>
+          <div class="banner-nucleo">
+            <i class="fas fa-microchip"></i>
+          </div>
+        </div>
+
+        <div class="menu-links" id="menu-links">
+          <a href="#inicio">Início</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#tecnologia">Tecnologia</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <button class="botao-enter">Entrar</button>
+        <button class="botao-menu" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+      </nav>
+    </div>
+  </header>
 
   <!-- Seção de Hero -->
   <section class="inicio" id="inicio">
@@ -84,13 +94,17 @@
         <div class="carrossel-item"><img src="./assets/img/carousel/img1.jpg" alt="Robô 1"></div>
         <div class="carrossel-item"><img src="./assets/img/carousel/img2.jpg" alt="Robô 2"></div>
         <div class="carrossel-item"><img src="./assets/img/carousel/img3.jpg" alt="Robô 3"></div>
-        <div class="carrossel-item"><img src="./assets/img/carousel/img4.jpg" alt="Robô 4"></div>
-        <div class="carrossel-item"><img src="./assets/img/carousel/img5.jpg" alt="Robô 5"></div>
-        <div class="carrossel-item"><img src="./assets/img/carousel/img6.jpg" alt="Robô 6"></div>
+        <div class="carrossel-item"><video src="./assets/img/carousel/video1.mp4" aria-label="Robô 4" muted playsinline
+            preload="metadata"></video></div>
+        <div class="carrossel-item"><video src="./assets/img/carousel/video2.mp4" aria-label="Robô 5" muted playsinline
+            preload="metadata"></video></div>
+        <div class="carrossel-item"><video src="./assets/img/carousel/video3.mp4" aria-label="Robô 6" muted playsinline
+            preload="metadata"></video></div>
       </div>
       <button class="carrossel-botao-esquerda" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
       <button class="carrossel-botao-direita" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
     </section>
+  </section>
 
 </body>
 

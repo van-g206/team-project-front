@@ -151,6 +151,7 @@ h1.futuro      { color: #3d5f7a; }
   gap: 20px;
   width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 12px calc(50% - 140px); /* Mantém o card centralizado no início e no fim. */
   scroll-snap-type: x mandatory; /* Faz a rolagem encaixar nos cards horizontalmente. */
   scrollbar-width: none; /* Oculta a barra de rolagem no Firefox. */
@@ -179,11 +180,13 @@ h1.futuro      { color: #3d5f7a; }
   box-shadow: 0 0 25px #00c2a8;
 }
 
-.carrossel-item img {
+.carrossel-item img,
+.carrossel-item video {
   display: block;
   width: 100%;
   height: 400px;
   object-fit: cover;
+  background-color: #04141C; /* fundo enquanto o vídeo carrega */
 }
 
 .carrossel-botao-esquerda,
@@ -203,6 +206,143 @@ h1.futuro      { color: #3d5f7a; }
 
 .carrossel-botao-esquerda { left: 4px; }
 .carrossel-botao-direita  { right: 4px; }
+
+/* ===== Banner do lado direito ===== */
+#inicio {
+  position: relative; /* o banner se posiciona em relação ao hero */
+}
+
+.banner-hero {
+  display: none;
+  position: absolute;
+  top: 150px;
+  right: clamp(24px, 5vw, 80px);
+  width: clamp(380px, 36vw, 540px);
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* ----- Anéis ----- */
+.banner-anel {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 229, 200, 0.35);
+}
+
+.anel-externo {
+  inset: 0;
+  animation: girar 40s linear infinite;
+}
+
+.anel-medio {
+  inset: 14%;
+  border-style: solid;
+  border-color: rgba(0, 229, 200, 0.2);
+  animation: girar 28s linear infinite reverse;
+}
+
+.anel-interno {
+  inset: 28%;
+  animation: girar 18s linear infinite;
+}
+
+/* bolinha que "orbita" no anel externo */
+.anel-externo::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: #00E5C8;
+  box-shadow: 0 0 14px #00E5C8;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+/* ----- Núcleo brilhante ----- */
+.banner-nucleo {
+  position: relative;
+  width: 28%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 229, 200, 0.35), rgba(0, 194, 168, 0.05) 70%);
+  border: 1px solid rgba(0, 229, 200, 0.5);
+  animation: pulsar 3s ease-in-out infinite;
+}
+
+.banner-nucleo i {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  color: #00E5C8;
+}
+
+@keyframes pulsar {
+  0%, 100% { box-shadow: 0 0 30px rgba(0, 229, 200, 0.3); }
+  50%      { box-shadow: 0 0 70px rgba(0, 229, 200, 0.65); }
+}
+
+
+
+.banner-ponto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00E5C8;
+  box-shadow: 0 0 10px #00E5C8;
+  animation: piscar 1.6s ease-in-out infinite;
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.25; }
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+.banner-barra {
+  height: 6px;
+  margin-top: 6px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.banner-barra-nivel {
+  width: 87%;
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #00C2A8, #00E5C8);
+  transition: width 0.8s;
+}
+
+/* Só mostra o banner quando há espaço ao lado do texto */
+@media (min-width: 1100px) {
+  .banner-hero {
+    display: flex;
+  }
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  .banner-anel,
+  .banner-nucleo,
+  .banner-cartao,
+  .banner-ponto {
+    animation: none;
+  }
+}
 
 /* ===== Celular ===== */
 @media (max-width: 600px) {
