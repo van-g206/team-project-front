@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,29 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/hero.css">
   <script src="./assets/js/main.js" defer></script>
+<script src="./assets/js/hero.js" defer></script>
 </head>
 
 <body>
 
   <header>
-    <div class="header-content">
-      <nav>
-        <img class="logo" src="./assets/img/icons/logo.png" alt="Logo do site">
+  <div class="header-content">
+    <nav>
+      <img class="logo" src="./assets/img/icons/logo.png" alt="Logo do site">
+
+      <div class="menu-links" id="menu-links">
         <a href="#inicio">Início</a>
         <a href="#produtos">Produtos</a>
         <a href="#tecnologia">Tecnologia</a>
         <a href="#sobre">Sobre</a>
         <a href="#contato">Contato</a>
-        <button class="botao-enter">Entrar</button>
-      </nav>
-    </div>
-  </header>
+      </div>
+
+      <button class="botao-enter">Entrar</button>
+      <button class="botao-menu" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+    </nav>
+  </div>
+</header>
 
   <!-- Seção de Hero -->
   <section class="inicio" id="inicio">
@@ -72,38 +79,18 @@
       </div>
     </div>
 
-    <section class="carroussel">
-  <h2 id="titulo-carrossel">Nossos produtos</h2>
-
-  <div class="carousel-lista">
-    <div class="carousel-item">
-      <img src="./assets/img/carousel/img1.jpg" alt="Item 1">
-    </div>
-
-    <div class="carousel-item">
-      <img src="./assets/img/carousel/img2.jpg" alt="Item 2">
-    </div>
-
-    <div class="carousel-item">
-      <img src="./assets/img/carousel/img3.jpg" alt="Item 3">
-    </div>
-
-    <div class="carousel-item">
-      <img src="./assets/img/carousel/img3.jpg" alt="Item 3">
-    </div>
-
-    <div class="carousel-item">
-      <img src="./assets/img/carousel/img3.jpg" alt="Item 3">
-    </div>
-
-    <div class="carousel-item">
-      <img src="./assets/img/carousel/img3.jpg" alt="Item 3">
-    </div>
-  </div>
-  <button class="carousel-left"><i class="fas fa-chevron-left"></i></button>
-  <button class="carousel-right"><i class="fas fa-chevron-right"></i></button>
-</section>
-  </section>
+    <section class="carrossel">
+      <div class="carrossel-lista">
+        <div class="carrossel-item"><img src="./assets/img/carousel/img1.jpg" alt="Robô 1"></div>
+        <div class="carrossel-item"><img src="./assets/img/carousel/img2.jpg" alt="Robô 2"></div>
+        <div class="carrossel-item"><img src="./assets/img/carousel/img3.jpg" alt="Robô 3"></div>
+        <div class="carrossel-item"><img src="./assets/img/carousel/img4.jpg" alt="Robô 4"></div>
+        <div class="carrossel-item"><img src="./assets/img/carousel/img5.jpg" alt="Robô 5"></div>
+        <div class="carrossel-item"><img src="./assets/img/carousel/img6.jpg" alt="Robô 6"></div>
+      </div>
+      <button class="carrossel-botao-esquerda" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+      <button class="carrossel-botao-direita" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+    </section>
 
 </body>
 
