@@ -75,8 +75,25 @@ body {
   background-color: #00C2A8;
   color: #041F2A;
   font-weight: 750;
+  
 }
 .botao-enter:hover {
   background-color: #0d6057;
   cursor: pointer;
+}
+
+/*Responsividade*/
+/*falta eu ajustar a logo que está desalinhada */
+@media (max-width: 600px) {
+  .header-content nav {
+    padding: 0 20px;
+  }
+  .logo {
+    width: 150px;
+  }
+  .botao-enter {
+    height: 30px;
+    width: 70px;
+    font-size: 12px;
+  }
 }
