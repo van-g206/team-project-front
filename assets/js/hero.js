@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const lista = document.querySelector('.carrossel-lista');
-  // Converte os elementos encontrados em uma lista para facilitar o uso.
   const cartoes = [...document.querySelectorAll('.carrossel-cartao')];
   const videos = [...document.querySelectorAll('.carrossel-cartao video')];
   const carrossel = document.querySelector('.carrossel');
   const botaoEsquerda = document.querySelector('.carrossel-botao-esquerda');
   const botaoDireita = document.querySelector('.carrossel-botao-direita');
 
-  const TEMPO_POR_IMAGEM = 3000; // em milissegundos
+  const TEMPO_POR_IMAGEM = 3000; 
   let indiceAtual = 0;           // card mais perto do centro agora
-  let indiceAtivo = -1;          // último card que "ativamos" (vídeo, temporizador)
+  let indiceAtivo = -1;          // último card que "ativamos"
   let temporizadorTroca = null;
   let temporizadorRolagem = null;
   let usuarioEmCima = false;     // mouse em cima ou dedo tocando
@@ -18,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return cartoes[indice].querySelector('video');
   }
 
-  // Descobre qual card está mais perto do centro da lista
-  // Calcula qual cartão está visualmente mais próximo do centro.
   function descobrirIndiceCentral() {
     const centroDaLista = lista.getBoundingClientRect().left + lista.clientWidth / 2;
     let indiceCentral = 0;
@@ -50,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Rola a lista (e só a lista) até o card escolhido
   function irParaCartao(indice) {
     const total = cartoes.length;
-    const indiceCorrigido = (indice + total) % total; // volta ao início/fim
+    const indiceCorrigido = (indice + total) % total;
 
     const cartao = cartoes[indiceCorrigido];
     const posicaoParaCentralizar =
@@ -67,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     irParaCartao(indiceAtual - 1);
   }
 
-  // ===== CONTROLE DO TEMPO ENTRE IMAGENS =====
   function pararTroca() {
     clearTimeout(temporizadorTroca);
     temporizadorTroca = null;
@@ -81,16 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const video = videoDoCartao(indiceAtual);
 
-    // Se o vídeo está tocando, não agenda nada:
     // quem chama o próximo card é o evento "ended" do vídeo
     if (video && !video.ended && !video.paused) return;
 
     temporizadorTroca = setTimeout(irParaProximo, TEMPO_POR_IMAGEM);
   }
 
-  // Roda uma vez sempre que um novo card chega ao centro
   function aoMudarDeCartao() {
-    // pausa e volta ao início todos os vídeos que não estão no centro
     videos.forEach((video) => {
       if (video.closest('.carrossel-cartao') !== cartoes[indiceAtual]) {
         video.pause();
@@ -98,11 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // se o card central tem vídeo, toca do começo
     const video = videoDoCartao(indiceAtual);
     if (video) {
       video.currentTime = 0;
-      video.play().catch(() => agendarTroca()); // se o navegador bloquear, segue por tempo
+      video.play().catch(() => agendarTroca()); 
     }
 
     agendarTroca();
@@ -121,9 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== ROLAGEM DO CARROSSEL =====
   lista.addEventListener('scroll', () => {
     destacarCartaoCentral();
-    pararTroca(); // não troca de card no meio da rolagem
+    pararTroca();
 
-    // espera a rolagem parar para ativar o card central
     clearTimeout(temporizadorRolagem);
     temporizadorRolagem = setTimeout(() => {
       if (indiceAtual !== indiceAtivo) {
@@ -141,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
   botaoDireita.addEventListener('click', irParaProximo);
   botaoEsquerda.addEventListener('click', irParaAnterior);
 
-  // ===== Pausa quando o usuário interage =====
+  // ===== Pausa quando o usuário interage ====
   carrossel.addEventListener('mouseenter', () => {
     usuarioEmCima = true;
     pararTroca();
@@ -162,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
     agendarTroca();
   });
 
-  // Pausa tudo se a aba do navegador ficar escondida
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       pararTroca();
@@ -172,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ===== INICIALIZAÇÃO DO CARROSSEL =====
   irParaCartao(0);
   destacarCartaoCentral();
   indiceAtivo = indiceAtual;

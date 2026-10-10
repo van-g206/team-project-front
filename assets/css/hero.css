@@ -1,5 +1,3 @@
-/* 1. BANNER INICIAL: texto à esquerda e fotografia à direita */
-
 .inicio {
     position: relative;
     display: flex;
@@ -9,8 +7,6 @@
     overflow: hidden;
     background-color: #041F2A;
 }
-
-/* A foto é decorativa. O texto continua editável no HTML. */
 
 .inicio-imagem {
     position: absolute;
@@ -27,7 +23,6 @@
 }
 
 /* Grade discreta por cima da fotografia, igual ao resto do site. */
-
 .inicio::after {
     content: "";
     position: absolute;
@@ -130,7 +125,6 @@
     font-size: 20px;
 }
 
-/* 2. ESTATÍSTICAS */
 
 .secao-estatisticas {
     padding: 0 6% 75px;
@@ -162,8 +156,6 @@
     text-transform: uppercase;
     margin-top: 8px;
 }
-
-/* 3. GALERIA / CARROSSEL */
 
 .secao-galeria,
 .secao-informacoes {
@@ -263,7 +255,7 @@
     right: 0;
 }
 
-/* 4. CARDS DE TECNOLOGIA */
+
 
 .grade-informacoes {
     max-width: 1180px;
@@ -273,33 +265,6 @@
     gap: 20px;
 }
 
-.cartao-informacao {
-    padding: 32px;
-    background: rgba(7,36,46,.95);
-    border: 1px solid rgba(0,194,168,.22);
-    border-radius: 18px;
-}
-
-.cartao-informacao i {
-    font-size: 26px;
-    color: var(--verde-claro);
-    margin-bottom: 22px;
-}
-
-.cartao-informacao h3 {
-    font: 700 21px "Space Grotesk",sans-serif;
-    margin-bottom: 12px;
-}
-
-.cartao-informacao p {
-    color: var(--texto-suave);
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-/* 5. SOBRE, CONTATO E RODAPÉ */
-
-/* 6. ADAPTAÇÃO PARA TABLETS E CELULARES */
 
 @media (max-width: 1050px) {
     .inicio {
