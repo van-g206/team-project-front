@@ -1,16 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const botaoMenu = document.querySelector('.botao-menu');
-  const menuLinks = document.querySelector('.menu-links');
+// Abre e fecha a navegação no celular.
+const botaoMenu = document.querySelector('.botao-menu');
+const linksNavegacao = document.querySelector('.links-navegacao');
 
-  // abre e fecha o menu no celular
-  botaoMenu.addEventListener('click', () => {
-    menuLinks.classList.toggle('aberto');
-  });
+botaoMenu.addEventListener('click', () => {
+  const menuAberto = linksNavegacao.classList.toggle('aberto');
+  botaoMenu.setAttribute('aria-expanded', menuAberto);
+  botaoMenu.setAttribute('aria-label', menuAberto ? 'Fechar menu' : 'Abrir menu');
+});
 
-  // fecha o menu depois de clicar em um link
-  menuLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      menuLinks.classList.remove('aberto');
-    });
+// Fecha o menu depois que a pessoa escolhe uma seção.
+linksNavegacao.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    linksNavegacao.classList.remove('aberto');
+    botaoMenu.setAttribute('aria-expanded', 'false');
+    botaoMenu.setAttribute('aria-label', 'Abrir menu');
   });
 });

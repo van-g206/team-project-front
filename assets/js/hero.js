@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const lista = document.querySelector('.carrossel-lista');
-  const cartoes = [...document.querySelectorAll('.carrossel-item')];
-  const videos = [...document.querySelectorAll('.carrossel-item video')];
+  // Converte os elementos encontrados em uma lista para facilitar o uso.
+  const cartoes = [...document.querySelectorAll('.carrossel-cartao')];
+  const videos = [...document.querySelectorAll('.carrossel-cartao video')];
   const carrossel = document.querySelector('.carrossel');
   const botaoEsquerda = document.querySelector('.carrossel-botao-esquerda');
   const botaoDireita = document.querySelector('.carrossel-botao-direita');
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Descobre qual card está mais perto do centro da lista
+  // Calcula qual cartão está visualmente mais próximo do centro.
   function descobrirIndiceCentral() {
     const centroDaLista = lista.getBoundingClientRect().left + lista.clientWidth / 2;
     let indiceCentral = 0;
@@ -65,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     irParaCartao(indiceAtual - 1);
   }
 
-  // ===== Controle do tempo =====
+  // ===== CONTROLE DO TEMPO ENTRE IMAGENS =====
   function pararTroca() {
     clearTimeout(temporizadorTroca);
     temporizadorTroca = null;
@@ -90,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function aoMudarDeCartao() {
     // pausa e volta ao início todos os vídeos que não estão no centro
     videos.forEach((video) => {
-      if (video.closest('.carrossel-item') !== cartoes[indiceAtual]) {
+      if (video.closest('.carrossel-cartao') !== cartoes[indiceAtual]) {
         video.pause();
         video.currentTime = 0;
       }
@@ -109,14 +111,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Quando um vídeo termina, avança (se o usuário não estiver com o mouse em cima)
   videos.forEach((video) => {
     video.addEventListener('ended', () => {
-      const eVideoDoCentro = video.closest('.carrossel-item') === cartoes[indiceAtual];
+      const eVideoDoCentro = video.closest('.carrossel-cartao') === cartoes[indiceAtual];
       if (eVideoDoCentro && !usuarioEmCima) {
         irParaProximo();
       }
     });
   });
 
-  // ===== Rolagem =====
+  // ===== ROLAGEM DO CARROSSEL =====
   lista.addEventListener('scroll', () => {
     destacarCartaoCentral();
     pararTroca(); // não troca de card no meio da rolagem
@@ -135,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', destacarCartaoCentral);
 
-  // ===== Botões =====
+  // ===== BOTÕES ANTERIOR E PRÓXIMO =====
   botaoDireita.addEventListener('click', irParaProximo);
   botaoEsquerda.addEventListener('click', irParaAnterior);
 
@@ -170,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ===== Início =====
+  // ===== INICIALIZAÇÃO DO CARROSSEL =====
   irParaCartao(0);
   destacarCartaoCentral();
   indiceAtivo = indiceAtual;

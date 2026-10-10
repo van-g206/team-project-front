@@ -1,385 +1,163 @@
-/* ===== Seção principal ===== */
-#inicio {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 80px clamp(24px, 5vw, 80px) 60px;
-}
-
-.hero-content {
-  max-width: 820px;
-}
-
-/* ===== Textos ===== */
-p.titulo {
-  color: #00C2A8;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  margin-bottom: 28px;
-}
-
-.hero-content h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: clamp(2.8rem, 8vw, 5.5rem);
-  line-height: 1.08;
-  letter-spacing: -1.5px;
-}
-
-h1.robotica    { color: #ffffff; }
-h1.inteligente { color: #00E5C8; }
-h1.futuro      { color: #3d5f7a; }
-
-.hero-content p:not(.titulo) {
-  margin-top: 32px;
-  max-width: 560px;
-  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-  line-height: 1.75;
-  color: rgba(230, 255, 251, 0.72);
-}
-
-.hero-content p br {
-  display: none;
-}
-
-/* ===== Botões ===== */
-.hero-botoes {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 44px;
-}
-
-.botao-produtos,
-.botao-sobre {
-  height: 58px;
-  padding: 0 34px;
-  border-radius: 99px;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition: 0.25s;
-}
-
-.botao-produtos {
-  background: linear-gradient(135deg, #00E5C8, #00C2A8);
-  color: #041F2A;
-  box-shadow: 0 0 30px rgba(0, 229, 200, 0.4); /* brilho do botão */
-}
-
-.botao-produtos:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 40px rgba(0, 229, 200, 0.65);
-}
-
-.botao-produtos .seta {
-  color: #041F2A;
-  font-size: 20px;
-  line-height: 1;
-  transition: transform 0.25s;
-}
-
-.botao-produtos:hover .seta {
-  transform: translateX(4px);
-}
-
-.botao-sobre {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-.botao-sobre:hover {
-  background-color: rgba(0, 229, 200, 0.15);
-  border-color: rgba(0, 229, 200, 0.5);
-  transform: translateY(-2px);
-}
-
-/* ===== Estatísticas ===== */
-.estatisticas {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  max-width: 760px;
-  margin-top: 72px;
-}
-
-.estatistica {
-  text-align: left;
-  padding-left: 32px;
-  border-left: 1px solid rgba(0, 194, 168, 0.3);
-}
-
-.estatistica:first-child {
-  padding-left: 0;
-  border-left: none;
-}
-
-.estatistica h2 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  font-weight: 700;
-  line-height: 1;
-  color: #00E5C8;
-}
-
-.estatistica p {
-  margin-top: 12px;
-  font-size: clamp(10px, 1.2vw, 13px); /* Ajusta o tamanho entre 10px e 13px conforme a tela. */
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase; /* Exibe o texto sempre em letras maiúsculas. */
-  color: rgba(230, 255, 251, 0.65);
-}
-
-/* ===== Carrossel ===== */
-.carrossel {
-  position: relative;
-  width: 100%;
-  margin-top: 72px;
-}
-
-.carrossel-lista {
+/* 1. BANNER INICIAL: texto à esquerda e fotografia à direita */
+.inicio {
   position: relative;
   display: flex;
-  gap: 20px;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 12px calc(50% - 140px); /* Mantém o card centralizado no início e no fim. */
-  scroll-snap-type: x mandatory; /* Faz a rolagem encaixar nos cards horizontalmente. */
-  scrollbar-width: none; /* Oculta a barra de rolagem no Firefox. */
-  -ms-overflow-style: none; /* Oculta a barra de rolagem no Internet Explorer. */
-}
-
-.carrossel-lista::-webkit-scrollbar {
-  display: none;
-}
-
-.carrossel-item {
-  flex: 0 0 280px;
+  align-items: center;
+  min-height: 650px;
+  padding: 85px 6% 90px;
   overflow: hidden;
-  border: 1px solid rgba(0, 194, 168, 0.35);
-  border-radius: 16px;
-  background-color: rgba(4, 20, 28, 0.8);
-  opacity: 0.4;
-  transform: scale(0.9);
-  transition: 0.3s;
-  scroll-snap-align: center;
+  background-color: #041F2A;
 }
 
-.carrossel-item.foco {
-  opacity: 1;
-  transform: scale(1.08);
-  box-shadow: 0 0 25px #00c2a8;
-}
-
-.carrossel-item img,
-.carrossel-item video {
-  display: block;
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  background-color: #04141C; /* fundo enquanto o vídeo carrega */
-}
-
-.carrossel-botao-esquerda,
-.carrossel-botao-direita {
+/* A foto é decorativa. O texto continua editável no HTML. */
+.inicio-imagem {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  background-color: rgba(0, 194, 168, 0.8);
-  border: none;
-  border-radius: 4px;
-  color: white;
-  font-size: 24px;
-  padding: 8px;
-  cursor: pointer;
+  top: 0;
+  right: 0;
+  width: 57%;
+  height: 100%;
+  background-image: url('../img/banner-robo.jpg');
+  background-position: center;
+  background-size: cover;
+  /* A sombra faz a foto se misturar ao fundo sem bordas duras. */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 38%);
+  mask-image: linear-gradient(to right, transparent, black 38%);
 }
 
-.carrossel-botao-esquerda { left: 4px; }
-.carrossel-botao-direita  { right: 4px; }
-
-/* ===== Banner do lado direito ===== */
-#inicio {
-  position: relative; /* o banner se posiciona em relação ao hero */
-}
-
-.banner-hero {
-  display: none;
+/* Grade discreta por cima da fotografia, igual ao resto do site. */
+.inicio::after {
+  content: '';
   position: absolute;
-  top: 150px;
-  right: clamp(24px, 5vw, 80px);
-  width: clamp(380px, 36vw, 540px);
-  aspect-ratio: 1;
-  align-items: center;
-  justify-content: center;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 194, 168, .04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 194, 168, .04) 1px, transparent 1px);
+  background-size: 60px 60px;
   pointer-events: none;
 }
 
-/* ----- Anéis ----- */
-.banner-anel {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px dashed rgba(0, 229, 200, 0.35);
-}
-
-.anel-externo {
-  inset: 0;
-  animation: girar 40s linear infinite;
-}
-
-.anel-medio {
-  inset: 14%;
-  border-style: solid;
-  border-color: rgba(0, 229, 200, 0.2);
-  animation: girar 28s linear infinite reverse;
-}
-
-.anel-interno {
-  inset: 28%;
-  animation: girar 18s linear infinite;
-}
-
-/* bolinha que "orbita" no anel externo */
-.anel-externo::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  margin-left: -5px;
-  border-radius: 50%;
-  background: #00E5C8;
-  box-shadow: 0 0 14px #00E5C8;
-}
-
-@keyframes girar {
-  to { transform: rotate(360deg); }
-}
-
-/* ----- Núcleo brilhante ----- */
-.banner-nucleo {
+.inicio-conteudo {
   position: relative;
-  width: 28%;
-  aspect-ratio: 1;
+  z-index: 1;
+  width: 100%;
+  max-width: 750px;
+  margin: 0;
+}
+
+.titulo {
+  margin-bottom: 25px;
+  color: var(--verde-claro);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.titulo-principal {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(48px, 6.5vw, 88px);
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: -2px;
+}
+
+.titulo-principal span { display: block; }
+.robotica { color: #fff; }
+.inteligente { color: var(--verde-claro); }
+.futuro { color: #6386A0; }
+
+.inicio-conteudo > p:not(.titulo) {
+  max-width: 580px;
+  margin-top: 28px;
+  color: #B2C6C9;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.7;
+}
+
+.inicio-botoes {
   display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.botao-produtos, .botao-sobre {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 229, 200, 0.35), rgba(0, 194, 168, 0.05) 70%);
-  border: 1px solid rgba(0, 229, 200, 0.5);
-  animation: pulsar 3s ease-in-out infinite;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: background .2s;
 }
 
-.banner-nucleo i {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  color: #00E5C8;
+/* 2. ESTATÍSTICAS */
+.secao-estatisticas { padding: 0 6% 75px; }
+.estatisticas { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 1180px; gap: 18px; margin: 0 auto; }
+.estatistica { padding: 20px 24px; border-left: 1px solid rgba(0,194,168,.4); }
+.estatistica h2 { color: var(--verde-claro); font: 700 clamp(26px,3.2vw,42px) 'Space Grotesk',sans-serif; }
+.estatistica p { color: var(--texto-suave); font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 8px; }
+
+/* 3. GALERIA / CARROSSEL */
+.secao-galeria, .secao-informacoes, .secao-sobre, .secao-contato { padding: 75px 6%; }
+.titulo-secao { max-width: 1180px; margin: 0 auto 34px; }
+.titulo-secao span, .etiqueta { color: var(--verde-claro); font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+.titulo-secao h2, .secao-sobre h2, .secao-contato h2 { font: 700 clamp(28px,4vw,44px) 'Space Grotesk',sans-serif; margin-top: 12px; }
+.titulo-secao p, .secao-sobre p, .secao-contato p { color: var(--texto-suave); line-height: 1.7; margin-top: 14px; }
+.carrossel { position: relative; max-width: 1180px; margin: auto; }
+.carrossel-lista { display: flex; gap: 20px; overflow-x: auto; overflow-y: hidden; padding: 20px calc(50% - 140px); scroll-snap-type: x mandatory; scrollbar-width: none; }
+.carrossel-lista::-webkit-scrollbar { display: none; }
+.carrossel-cartao { flex: 0 0 280px; border: 1px solid rgba(0,194,168,.4); border-radius: 18px; overflow: hidden; opacity: .55; transform: scale(.94); scroll-snap-align: center; transition: opacity .3s, transform .3s, box-shadow .3s; background: var(--fundo-escuro); }
+.carrossel-cartao.foco { opacity: 1; transform: scale(1); box-shadow: 0 0 28px rgba(0,194,168,.3); }
+.carrossel-cartao img, .carrossel-cartao video { display: block; width: 100%; height: 370px; object-fit: cover; }
+.carrossel-botao-esquerda, .carrossel-botao-direita { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.3); border-radius: 50%; color: white; background: #087B72; cursor: pointer; }
+.carrossel-botao-esquerda { left: 0; } .carrossel-botao-direita { right: 0; }
+
+/* 4. CARDS DE TECNOLOGIA */
+.grade-informacoes { max-width: 1180px; margin: auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.cartao-informacao { padding: 32px; background: rgba(7,36,46,.95); border: 1px solid rgba(0,194,168,.22); border-radius: 18px; }
+.cartao-informacao i { font-size: 26px; color: var(--verde-claro); margin-bottom: 22px; }
+.cartao-informacao h3 { font: 700 21px 'Space Grotesk',sans-serif; margin-bottom: 12px; }
+.cartao-informacao p { color: var(--texto-suave); font-size: 15px; line-height: 1.7; }
+
+/* 5. SOBRE, CONTATO E RODAPÉ */
+.secao-sobre { max-width: 1320px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.secao-contato { text-align: center; background: rgba(0,194,168,.055); border-top: 1px solid rgba(0,194,168,.16); }
+.secao-contato .botao-produtos { margin-top: 28px; }
+.secao-contato .aviso-contato { font-size: 12px; opacity: .7; }
+.rodape { text-align: center; padding: 28px 6%; color: var(--texto-suave); font-size: 13px; background: var(--fundo-escuro); }
+
+/* 6. ADAPTAÇÃO PARA TABLETS E CELULARES */
+@media (max-width: 1050px) {
+  .inicio { min-height: 620px; }
+  .inicio-imagem { width: 65%; opacity: .55; }
+  .inicio-conteudo { max-width: 650px; }
 }
 
-@keyframes pulsar {
-  0%, 100% { box-shadow: 0 0 30px rgba(0, 229, 200, 0.3); }
-  50%      { box-shadow: 0 0 70px rgba(0, 229, 200, 0.65); }
-}
-
-
-
-.banner-ponto {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #00E5C8;
-  box-shadow: 0 0 10px #00E5C8;
-  animation: piscar 1.6s ease-in-out infinite;
-}
-
-@keyframes piscar {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0.25; }
-}
-
-@keyframes flutuar {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-12px); }
-}
-
-.banner-barra {
-  height: 6px;
-  margin-top: 6px;
-  border-radius: 99px;
-  background: rgba(255, 255, 255, 0.12);
-  overflow: hidden;
-}
-
-.banner-barra-nivel {
-  width: 87%;
-  height: 100%;
-  border-radius: 99px;
-  background: linear-gradient(90deg, #00C2A8, #00E5C8);
-  transition: width 0.8s;
-}
-
-/* Só mostra o banner quando há espaço ao lado do texto */
-@media (min-width: 1100px) {
-  .banner-hero {
-    display: flex;
+@media (max-width: 800px) {
+  .inicio { min-height: 610px; padding: 65px 6%; }
+  .inicio-imagem { width: 100%; opacity: .25; }
+  .inicio-imagem {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 80%);
+    mask-image: linear-gradient(to right, transparent, black 80%);
+  }
+  .estatisticas { grid-template-columns: repeat(2, 1fr); }
+  .grade-informacoes, .secao-sobre { grid-template-columns: 1fr; }
+  .secao-galeria, .secao-informacoes, .secao-sobre, .secao-contato {
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 }
 
-/* Respeita quem prefere menos movimento */
-@media (prefers-reduced-motion: reduce) {
-  .banner-anel,
-  .banner-nucleo,
-  .banner-cartao,
-  .banner-ponto {
-    animation: none;
-  }
-}
-
-/* ===== Celular ===== */
-@media (max-width: 600px) {
-  #inicio {
-    padding-top: 48px;
-  }
-
-  p.titulo {
-    font-size: 11px;
-    letter-spacing: 3px;
-  }
-
-  .botao-produtos,
-  .botao-sobre {
-    height: 52px;
-    padding: 0 26px;
-    font-size: 15px;
-  }
-
-  .estatisticas {
-    gap: 12px;
-    margin-top: 56px;
-  }
-
-  .estatistica {
-    padding-left: 12px;
-  }
-
-  .carrossel {
-    margin-top: 48px;
-  }
-
-  .carrossel-item {
-    flex-basis: 240px;
-  }
-
-  .carrossel-lista {
-    padding: 12px calc(50% - 120px);
-  }
+@media (max-width: 480px) {
+  .inicio { min-height: 590px; }
+  .titulo { font-size: 10px; letter-spacing: 2px; }
+  .titulo-principal { font-size: clamp(40px, 11vw, 56px); letter-spacing: -1px; }
+  .inicio-conteudo > p:not(.titulo) br { display: none; }
+  .inicio-botoes a { width: 100%; }
+  .estatistica { padding: 15px 10px; }
+  .carrossel-cartao { flex-basis: 240px; }
+  .carrossel-lista { padding-left: calc(50% - 120px); padding-right: calc(50% - 120px); }
+  .carrossel-cartao img, .carrossel-cartao video { height: 320px; }
 }
