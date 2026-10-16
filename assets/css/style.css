@@ -34,3 +34,4 @@ header { position: sticky; top: 0; z-index: 50; background: rgba(4,20,28,.96); b
 }
 @media (max-width: 420px) { .logo { width: 120px; } .botao-entrar { min-width: 68px; font-size: 13px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
