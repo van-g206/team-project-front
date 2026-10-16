@@ -9,32 +9,39 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/hero.css">
   <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/hero.js" defer></script>
 </head>
 
 <body>
 
   <header>
-    <div class="header-content">
-      <nav>
-        <img class="logo" src="./assets/img/icons/logo.png" alt="Logo do site">
-        <a href="#inicio">Início</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#tecnologia">Tecnologia</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-        <button class="botao-enter">Entrar</button>
+    <div class="cabecalho-conteudo">
+      <nav aria-label="Navegação principal">
+        <a class="marca" href="#inicio" aria-label="Voltar ao início"><img class="logo" src="./assets/img/icons/logo.png" alt="Logo do site"></a>
+
+        <div class="links-navegacao" id="links-navegacao">
+          <a href="#inicio">Início</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#tecnologia">Tecnologia</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <a class="botao-entrar" href="#contato">Entrar</a>
+        <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="links-navegacao"><i class="fas fa-bars"></i></button>
       </nav>
     </div>
   </header>
 
+  <!-- SEÇÃO HERO -->
+  <main>
   <section class="inicio" id="inicio">
-    <div class="hero-content">
+    <div class="inicio-imagem" aria-hidden="true"></div>
+    <div class="inicio-conteudo">
       <p class="titulo">
         ROBÓTICA AVANÇADA • DESDE 2015
       </p>
-      <h1 class="robotica">Robótica</h1>
-      <h1 class="inteligente">inteligente</h1>
-      <h1 class="futuro">para o Futuro</h1>
+      <h1 class="titulo-principal"><span class="robotica">Robótica</span><span class="inteligente">inteligente</span><span class="futuro">para o Futuro</span></h1>
       <p>
         Sistemas autônomos de última geração com IA embarcada
         <br>
@@ -42,7 +49,7 @@
         <br>
         com precisão onde mais importa.
       </p>
-      <div class="hero-botoes">
+      <div class="inicio-botoes">
         <a href="#produtos" class="botao-produtos">
           Ver Produtos
           <span class="seta">→</span>
@@ -52,9 +59,10 @@
         </a>
       </div>
     </div>
+  </section>
 
+  <section class="secao-estatisticas" aria-label="Nossos números">
     <div class="estatisticas">
-
       <div class="estatistica">
         <h2>99.97%</h2>
         <p>Disponibilidade</p>
@@ -71,9 +79,27 @@
         <h2>28</h2>
         <p>Países</p>
       </div>
-
     </div>
+  </section>
 
+  <!-- carousel -->
+  <section id="produtos" class="secao-galeria">
+    <div class="titulo-secao"><span>CONHEÇA NOSSA TECNOLOGIA</span><h2>Produtos</h2><p>Explore imagens e demonstrações dos nossos projetos.</p></div>
+    <div class="carrossel">
+      <div class="carrossel-lista">
+        <div class="carrossel-cartao"><img src="./assets/img/carousel/img1.jpg" alt="Robô 1"></div>
+        <div class="carrossel-cartao"><img src="./assets/img/carousel/img2.jpg" alt="Robô 2"></div>
+        <div class="carrossel-cartao"><img src="./assets/img/carousel/img3.jpg" alt="Robô 3"></div>
+        <div class="carrossel-cartao"><video src="./assets/img/carousel/video1.mp4" aria-label="Robô 4" muted playsinline
+            preload="metadata"></video></div>
+        <div class="carrossel-cartao"><video src="./assets/img/carousel/video2.mp4" aria-label="Robô 5" muted playsinline
+            preload="metadata"></video></div>
+        <div class="carrossel-cartao"><video src="./assets/img/carousel/video3.mp4" aria-label="Robô 6" muted playsinline
+            preload="metadata"></video></div>
+      </div>
+      <button class="carrossel-botao-esquerda" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+      <button class="carrossel-botao-direita" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+    </div>
   </section>
 
   <!-- Seção Sobre a Empresa - Parte REBECA-->
