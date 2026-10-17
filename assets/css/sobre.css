@@ -1,4 +1,41 @@
-.sobre-cabecalho h2 {
+.container {
+  padding: 75px 6%;
+}
+.sobre-proposta h2 {
   font-family: arial, sans-serif;
   color: #00C2A8;
+  font: 700 clamp(20px,4vw,32px) "Space Grotesk",sans-serif;
+  margin-top: 12px;
+}
+
+.sobre-proposta p{
+  color: var(--texto-suave);
+  line-height: 1.7;
+  margin-top: 14px;
+}
+
+.sobre-empresa h2 {
+  font-family: arial, sans-serif;
+  color: #00C2A8;
+  font: 700 clamp(20px,4vw,32px) "Space Grotesk",sans-serif;
+  margin-top: 12px;
+}
+
+.sobre-empresa p{
+  color: var(--texto-suave);
+  line-height: 1.7;
+  margin-top: 14px;
+}
+
+.sobre-missao h2 {
+  font-family: arial, sans-serif;
+  color: #00C2A8;
+  font: 700 clamp(20px,4vw,32px) "Space Grotesk",sans-serif;
+  margin-top: 12px;
+}
+
+.sobre-missao p{
+  color: var(--texto-suave);
+  line-height: 1.7;
+  margin-top: 14px;
 }
