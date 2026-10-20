@@ -1,0 +1,20 @@
+footer{
+   padding: 20px 0;
+   text-align: center;
+
+
+}
+.logo-footer {
+    margin-left: 0px;
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.a{
+    color: #fff;
+}
+.a:hover{
+    color: #6c63ff;
+    text-decoration: underline;
+}
