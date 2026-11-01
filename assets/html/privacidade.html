@@ -2,181 +2,106 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#04141C">
+    <meta name="description"
+        content="Entenda quais informações são tratadas pela Lytos e como você pode exercer seus direitos. Última atualização: 22 de outubro de 2026. Em conformidade c">
     <title>Política de Privacidade | Lytos</title>
-    <style>
-        :root {
-            --fundo: #041F2A;
-            --fundo-escuro: #04141C;
-            --verde: #00C2A8;
-            --verde-claro: #00E5C8;
-            --texto: #E6FFFB;
-            --texto-suave: #A4BCBE;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: var(--fundo);
-            color: var(--texto);
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-            line-height: 1.7;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        a {
-            color: var(--verde-claro);
-        }
-
-        a:focus-visible {
-            outline: 2px solid var(--verde-claro);
-            outline-offset: 3px;
-        }
-
-        header {
-            background: var(--fundo-escuro);
-            border-bottom: 1px solid rgba(0, 194, 168, .25);
-        }
-
-        .topo {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 20px;
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .topo img {
-            height: 32px;
-            display: block;
-        }
-
-        .topo a {
-            text-decoration: none;
-            color: var(--texto-suave);
-            font-size: .95rem;
-        }
-
-        .topo a:hover {
-            color: var(--verde-claro);
-        }
-
-        main {
-            flex: 1;
-            width: 100%;
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 0 20px 40px;
-        }
-
-        h1 {
-            font-size: 2rem;
-            color: var(--verde);
-            margin: 40px 0 4px;
-        }
-
-        .data {
-            color: var(--texto-suave);
-            font-size: .9rem;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            margin: 24px 0 6px;
-            color: var(--verde-claro);
-        }
-
-        p {
-            margin-bottom: 12px;
-        }
-
-        ul {
-            margin: 0 0 12px 22px;
-        }
-
-        li {
-            margin-bottom: 4px;
-        }
-
-        li::marker {
-            color: var(--verde);
-        }
-
-        footer {
-            background: var(--fundo-escuro);
-            color: var(--texto-suave);
-            text-align: center;
-            padding: 24px 20px;
-            font-size: .9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/institucional.css">
 </head>
-
 <body>
-
     <header>
-        <div class="topo">
-            <img src="/assets/img/icons/folha-logo.png" alt="Logo da Lytos">
-            <a href="/index.html">← Voltar ao site</a>
+        <div class="topbar"><a class="brand" href="/index.html" aria-label="Lytos — página inicial"><span
+                    class="brand-mark" aria-hidden="true">L</span>LYTOS</a>
+            <nav class="top-actions" aria-label="Navegação principal"><a class="button button-outline"
+                    href="/index.html"><span aria-hidden="true">←</span> Voltar ao site</a></nav>
         </div>
     </header>
-
-    <main>
-        <h1>Política de Privacidade</h1>
-        <p class="data">Última atualização: 22 de outubro de 2026. Em conformidade com a LGPD (Lei nº 13.709/2018).</p>
-
-        <h2>1. Quem somos</h2>
-        <p>A Lytos é uma empresa de robótica e automação industrial. Somos a responsável pelos dados pessoais tratados
-            neste site.</p>
-
-        <h2>2. Dados que coletamos</h2>
-        <ul>
-            <li>Nome, e-mail, telefone e empresa, quando você entra em contato conosco.</li>
-            <li>Dados de navegação, como IP, navegador, dispositivo e páginas visitadas.</li>
-            <li>Informações técnicas de projetos que você nos enviar para orçamentos.</li>
-        </ul>
-
-        <h2>3. Como usamos seus dados</h2>
-        <ul>
-            <li>Responder suas mensagens e pedidos de orçamento.</li>
-            <li>Prestar os serviços contratados e dar suporte.</li>
-            <li>Melhorar o site e mantê-lo seguro.</li>
-            <li>Cumprir obrigações legais.</li>
-        </ul>
-
-        <h2>4. Compartilhamento</h2>
-        <p>Não vendemos seus dados. Só os compartilhamos com prestadores que nos ajudam a operar o site (como hospedagem
-            e e-mail) ou quando a lei exigir.</p>
-
-        <h2>5. Cookies</h2>
-        <p>Usamos cookies para o site funcionar e para entender como ele é usado. Você pode bloqueá-los nas
-            configurações do navegador.</p>
-
-        <h2>6. Segurança</h2>
-        <p>Usamos medidas técnicas e administrativas para proteger seus dados e os guardamos apenas pelo tempo
-            necessário.</p>
-
-        <h2>7. Seus direitos</h2>
-        <p>Você pode pedir acesso, correção, exclusão, portabilidade ou informações sobre o uso dos seus dados, e pode
-            retirar seu consentimento quando quiser.</p>
-
-        <h2>8. Contato</h2>
-        <p>Para exercer seus direitos, escreva para <a
-                href="mailto:privacidade@lytos.com.br">privacidade@lytos.com.br</a>.</p>
+    <main class="layout">
+        <div class="hero">
+            <p class="eyebrow">Transparência e proteção de dados</p>
+            <h1>Política de Privacidade</h1>
+            <p class="lead">Entenda quais informações são tratadas pela Lytos e como você pode exercer seus direitos.
+                Última atualização: 22 de outubro de 2026. Em conformidade com a LGPD (Lei nº 13.709/2018).</p>
+            <div class="hero-actions"><a class="button button-outline" href="suporte.html">Precisa de ajuda? <span
+                        aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="content-grid">
+            <nav class="sidebar" aria-label="Nesta página">
+                <p class="sidebar-label">Nesta página</p><a class="side-link" href="#sec-1">1. Quem somos</a><a
+                    class="side-link" href="#sec-2">2. Dados que coletamos</a><a class="side-link" href="#sec-3">3. Como
+                    usamos seus dados</a><a class="side-link" href="#sec-4">4. Compartilhamento</a><a class="side-link"
+                    href="#sec-5">5. Cookies</a><a class="side-link" href="#sec-6">6. Segurança</a><a class="side-link"
+                    href="#sec-7">7. Seus direitos</a><a class="side-link" href="#sec-8">8. Contato</a>
+            </nav>
+            <article class="article">
+                <section class="section" id="sec-1">
+                    <h2>1. Quem somos</h2>
+                    <p>A Lytos é uma empresa de robótica e automação industrial. Somos a responsável pelos dados
+                        pessoais tratados
+                        neste site.</p>
+                </section>
+                <section class="section" id="sec-2">
+                    <h2>2. Dados que coletamos</h2>
+                    <ul>
+                        <li>Nome, e-mail, telefone e empresa, quando você entra em contato conosco.</li>
+                        <li>Dados de navegação, como IP, navegador, dispositivo e páginas visitadas.</li>
+                        <li>Informações técnicas de projetos que você nos enviar para orçamentos.</li>
+                    </ul>
+                </section>
+                <section class="section" id="sec-3">
+                    <h2>3. Como usamos seus dados</h2>
+                    <ul>
+                        <li>Responder suas mensagens e pedidos de orçamento.</li>
+                        <li>Prestar os serviços contratados e dar suporte.</li>
+                        <li>Melhorar o site e mantê-lo seguro.</li>
+                        <li>Cumprir obrigações legais.</li>
+                    </ul>
+                </section>
+                <section class="section" id="sec-4">
+                    <h2>4. Compartilhamento</h2>
+                    <p>Não vendemos seus dados. Só os compartilhamos com prestadores que nos ajudam a operar o site
+                        (como hospedagem
+                        e e-mail) ou quando a lei exigir.</p>
+                </section>
+                <section class="section" id="sec-5">
+                    <h2>5. Cookies</h2>
+                    <p>Usamos cookies para o site funcionar e para entender como ele é usado. Você pode bloqueá-los nas
+                        configurações do navegador.</p>
+                </section>
+                <section class="section" id="sec-6">
+                    <h2>6. Segurança</h2>
+                    <p>Usamos medidas técnicas e administrativas para proteger seus dados e os guardamos apenas pelo
+                        tempo
+                        necessário.</p>
+                </section>
+                <section class="section" id="sec-7">
+                    <h2>7. Seus direitos</h2>
+                    <p>Você pode pedir acesso, correção, exclusão, portabilidade ou informações sobre o uso dos seus
+                        dados, e pode
+                        retirar seu consentimento quando quiser.</p>
+                </section>
+                <section class="section" id="sec-8">
+                    <h2>8. Contato</h2>
+                    <p>Para exercer seus direitos, escreva para <a
+                            href="mailto:privacidade@lytos.com.br">privacidade@lytos.com.br</a>.</p>
+                </section>
+                <div class="next-links">
+                    <h2>Explore também</h2>
+                    <div class="link-row"><a class="button button-outline" href="termos.html">Termos de uso</a><a
+                            class="button button-outline" href="suporte.html">Suporte</a></div>
+                </div>
+            </article>
+        </div>
     </main>
-
-    <footer>
-        © 2026 Lytos. Todos os direitos reservados
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="copyright">© 2026 Lytos. Todos os direitos reservados.</p>
+            <nav class="footer-links" aria-label="Links institucionais"><a href="privacidade.html"
+                    aria-current=page>Privacidade</a><a href="termos.html">Termos de uso</a><a
+                    href="suporte.html">Suporte</a></nav>
+        </div>
     </footer>
-
 </body>
 
 </html>
