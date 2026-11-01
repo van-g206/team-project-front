@@ -1,202 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte | Lytos</title>
-    <style>
-        :root {
-            --fundo: #041F2A;
-            --fundo-escuro: #04141C;
-            --verde: #00C2A8;
-            --verde-claro: #00E5C8;
-            --texto: #E6FFFB;
-            --texto-suave: #A4BCBE;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: var(--fundo);
-            color: var(--texto);
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-            line-height: 1.7;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        a {
-            color: var(--verde-claro);
-        }
-
-        a:focus-visible {
-            outline: 2px solid var(--verde-claro);
-            outline-offset: 3px;
-        }
-
-        header {
-            background: var(--fundo-escuro);
-            border-bottom: 1px solid rgba(0, 194, 168, .25);
-        }
-
-        .topo {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 20px;
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .topo img {
-            height: 32px;
-            display: block;
-        }
-
-        .topo a {
-            text-decoration: none;
-            color: var(--texto-suave);
-            font-size: .95rem;
-        }
-
-        .topo a:hover {
-            color: var(--verde-claro);
-        }
-
-        main {
-            flex: 1;
-            width: 100%;
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 0 20px 40px;
-        }
-
-        h1 {
-            font-size: 2rem;
-            color: var(--verde);
-            margin: 40px 0 4px;
-        }
-
-        .data {
-            color: var(--texto-suave);
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            margin: 28px 0 6px;
-            color: var(--verde-claro);
-        }
-
-        p {
-            margin-bottom: 12px;
-        }
-
-        ul {
-            margin: 0 0 12px 22px;
-        }
-
-        li {
-            margin-bottom: 4px;
-        }
-
-        li::marker {
-            color: var(--verde);
-        }
-
-        .botao {
-            display: inline-block;
-            background: var(--verde);
-            color: var(--fundo-escuro);
-            font-weight: 700;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            margin: 6px 0 12px;
-        }
-
-        .botao:hover {
-            background: var(--verde-claro);
-        }
-
-        .caixa {
-            background: var(--fundo-escuro);
-            border-left: 3px solid var(--verde);
-            border-radius: 0 8px 8px 0;
-            padding: 16px 20px;
-            margin: 12px 0 8px;
-        }
-
-        .caixa p:last-child {
-            margin-bottom: 0;
-        }
-
-        footer {
-            background: var(--fundo-escuro);
-            color: var(--texto-suave);
-            text-align: center;
-            padding: 24px 20px;
-            font-size: .9rem;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#04141C">
+    <meta name="description"
+        content="Encontre orientações para solicitar atendimento e os canais de contato da Lytos. Atendimento informado no site: plantão 24 horas por dia, 7 dias por s">
+    <title>Central de Suporte | Lytos</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
-
     <header>
-        <div class="topo">
-            <img src="/assets/img/icons/logo.png" alt="Logo da Lytos">
-            <a href="/index.html">← Voltar ao site</a>
+        <div class="topbar"><a class="brand" href="index.html" aria-label="Lytos — página inicial"><span
+                    class="brand-mark" aria-hidden="true">L</span>LYTOS</a>
+            <nav class="top-actions" aria-label="Navegação principal"><a class="button button-outline"
+                    href="index.html"><span aria-hidden="true">←</span> Voltar ao site</a></nav>
         </div>
     </header>
-
-    <main>
-        <h1>Suporte</h1>
-        <p class="data">Plantão 24 horas por dia, 7 dias por semana, pelo WhatsApp.</p>
-
-        <a class="botao" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Falar no WhatsApp</a>
-
-        <h2>Como pedir ajuda</h2>
-        <p>Chame a gente pelo WhatsApp. Para agilizar o atendimento, tenha em mãos:</p>
-        <ul>
-            <li>Seu nome e o da sua empresa.</li>
-            <li>O produto ou projeto que precisa de ajuda.</li>
-            <li>Uma descrição do problema e, se possível, fotos ou vídeos.</li>
-            <li>Se o equipamento está parado ou funcionando com falhas.</li>
-        </ul>
-
-        <h2>O que atendemos</h2>
-        <ul>
-            <li>Dúvidas sobre o uso de sistemas e robôs.</li>
-            <li>Falhas e manutenção de equipamentos instalados.</li>
-            <li>Dashboard em tempo real (web, mobile e desktop).</li>
-            <li>Treinamento e mentoria das equipes.</li>
-            <li>Acionamento da garantia estendida de 12 meses.</li>
-        </ul>
-
-        <h2>Outros contatos</h2>
-        <div class="caixa">
-            <p>E-mail: <a href="mailto:suporte@lytos.com.br">suporte@lytos.com.br</a></p>
-            <p>Para orçamentos e novos projetos, use o <a
-                    href="https://van-g206.github.io/team-project-front/#contato">contato do site</a>.</p>
+    <main class="layout">
+        <div class="hero">
+            <p class="eyebrow">Estamos aqui para ajudar</p>
+            <h1>Central de Suporte</h1>
+            <p class="lead">Encontre orientações para solicitar atendimento e os canais de contato da Lytos. Atendimento
+                informado no site: plantão 24 horas por dia, 7 dias por semana, pelo WhatsApp.</p>
+            <div class="hero-actions"><a class="button button-primary" href="https://wa.me/5511999999999"
+                    target="_blank" rel="noopener noreferrer">Falar no WhatsApp <span aria-hidden="true">↗</span></a><a
+                    class="button button-outline" href="mailto:suporte@lytos.com.br">Enviar e-mail</a></div>
         </div>
-
-        <h2>Dúvidas rápidas</h2>
-        <p><strong>Qual o prazo de resposta?</strong><br>Respondemos o mais rápido possível. Chamados com equipamento
-            parado têm prioridade.</p>
-        <p><strong>Minha garantia ainda vale?</strong><br>Informe o nome do projeto e a data de entrega no WhatsApp que
-            confirmamos para você.</p>
+        <div class="content-grid">
+            <nav class="sidebar" aria-label="Nesta página">
+                <p class="sidebar-label">Nesta página</p><a class="side-link" href="#sec-1">Como pedir ajuda</a><a
+                    class="side-link" href="#sec-2">O que atendemos</a><a class="side-link" href="#sec-3">Outros
+                    contatos</a><a class="side-link" href="#sec-4">Dúvidas rápidas</a>
+            </nav>
+            <article class="article">
+                <section class="section" id="sec-1">
+                    <h2>Como pedir ajuda</h2>
+                    <p>Chame a gente pelo WhatsApp. Para agilizar o atendimento, tenha em mãos:</p>
+                    <ul>
+                        <li>Seu nome e o da sua empresa.</li>
+                        <li>O produto ou projeto que precisa de ajuda.</li>
+                        <li>Uma descrição do problema e, se possível, fotos ou vídeos.</li>
+                        <li>Se o equipamento está parado ou funcionando com falhas.</li>
+                    </ul>
+                </section>
+                <section class="section" id="sec-2">
+                    <h2>O que atendemos</h2>
+                    <ul>
+                        <li>Dúvidas sobre o uso de sistemas e robôs.</li>
+                        <li>Falhas e manutenção de equipamentos instalados.</li>
+                        <li>Dashboard em tempo real (web, mobile e desktop).</li>
+                        <li>Treinamento e mentoria das equipes.</li>
+                        <li>Acionamento da garantia estendida de 12 meses.</li>
+                    </ul>
+                </section>
+                <section class="section" id="sec-3">
+                    <h2>Outros contatos</h2>
+                    <div class="info-box">
+                        <p>E-mail: <a href="mailto:suporte@lytos.com.br">suporte@lytos.com.br</a></p>
+                        <p>Para orçamentos e novos projetos, use o <a
+                                href="https://van-g206.github.io/team-project-front/#contato">contato do site</a>.</p>
+                    </div>
+                </section>
+                <section class="section" id="sec-4">
+                    <h2>Dúvidas rápidas</h2>
+                    <p><strong>Qual o prazo de resposta?</strong><br />Respondemos o mais rápido possível. Chamados com
+                        equipamento
+                        parado têm prioridade.</p>
+                    <p><strong>Minha garantia ainda vale?</strong><br />Informe o nome do projeto e a data de entrega no
+                        WhatsApp que
+                        confirmamos para você.</p>
+                </section>
+                <div class="next-links">
+                    <h2>Explore também</h2>
+                    <div class="link-row"><a class="button button-outline" href="privacidade.html">Privacidade</a><a
+                            class="button button-outline" href="termos.html">Termos de uso</a></div>
+                </div>
+            </article>
+        </div>
     </main>
-
-    <footer>
-        © 2026 Lytos. Todos os direitos reservados
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="copyright">© 2026 Lytos. Todos os direitos reservados.</p>
+            <nav class="footer-links" aria-label="Links institucionais"><a href="privacidade.html">Privacidade</a><a
+                    href="termos.html">Termos de uso</a><a href="suporte.html" aria-current=page>Suporte</a></nav>
+        </div>
     </footer>
-
 </body>
 
 </html>

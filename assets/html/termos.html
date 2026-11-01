@@ -1,176 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#04141C">
+    <meta name="description"
+        content="Conheça as condições para utilizar este site e acessar as informações da Lytos. Última atualização: 22 de outubro de 2026. Ao usar este site, você con">
     <title>Termos de Uso | Lytos</title>
-    <style>
-        :root {
-            --fundo: #041F2A;
-            --fundo-escuro: #04141C;
-            --verde: #00C2A8;
-            --verde-claro: #00E5C8;
-            --texto: #E6FFFB;
-            --texto-suave: #A4BCBE;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: var(--fundo);
-            color: var(--texto);
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-            line-height: 1.7;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        a {
-            color: var(--verde-claro);
-        }
-
-        a:focus-visible {
-            outline: 2px solid var(--verde-claro);
-            outline-offset: 3px;
-        }
-
-        header {
-            background: var(--fundo-escuro);
-            border-bottom: 1px solid rgba(0, 194, 168, .25);
-        }
-
-        .topo {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 20px;
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .topo img {
-            height: 32px;
-            display: block;
-        }
-
-        .topo a {
-            text-decoration: none;
-            color: var(--texto-suave);
-            font-size: .95rem;
-        }
-
-        .topo a:hover {
-            color: var(--verde-claro);
-        }
-
-        main {
-            flex: 1;
-            width: 100%;
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 0 20px 40px;
-        }
-
-        h1 {
-            font-size: 2rem;
-            color: var(--verde);
-            margin: 40px 0 4px;
-        }
-
-        .data {
-            color: var(--texto-suave);
-            font-size: .9rem;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            margin: 24px 0 6px;
-            color: var(--verde-claro);
-        }
-
-        p {
-            margin-bottom: 12px;
-        }
-
-        ul {
-            margin: 0 0 12px 22px;
-        }
-
-        li {
-            margin-bottom: 4px;
-        }
-
-        li::marker {
-            color: var(--verde);
-        }
-
-        footer {
-            background: var(--fundo-escuro);
-            color: var(--texto-suave);
-            text-align: center;
-            padding: 24px 20px;
-            font-size: .9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
-
     <header>
-        <div class="topo">
-            <img src="/assets/img/icons/folha-logo.png" alt="Logo da Lytos">
-            <a href="/index.html">← Voltar ao site</a>
+        <div class="topbar"><a class="brand" href="index.html" aria-label="Lytos — página inicial"><span
+                    class="brand-mark" aria-hidden="true">L</span>LYTOS</a>
+            <nav class="top-actions" aria-label="Navegação principal"><a class="button button-outline"
+                    href="index.html"><span aria-hidden="true">←</span> Voltar ao site</a></nav>
         </div>
     </header>
-
-    <main>
-        <h1>Termos de Uso</h1>
-        <p class="data">Última atualização: 22 de outubro de 2026. Ao usar este site, você concorda com os termos
-            abaixo.</p>
-
-        <h2>1. Sobre o site</h2>
-        <p>O site apresenta a Lytos e seus serviços. As informações são apenas informativas e não substituem uma
-            proposta comercial.</p>
-
-        <h2>2. Uso permitido</h2>
-        <p>Você concorda em não:</p>
-        <ul>
-            <li>Violar leis ou direitos de terceiros.</li>
-            <li>Tentar acessar áreas ou dados sem autorização.</li>
-            <li>Prejudicar o funcionamento do site.</li>
-            <li>Fornecer informações falsas nos formulários.</li>
-        </ul>
-
-        <h2>3. Propriedade intelectual</h2>
-        <p>Marcas, logotipos, textos e imagens do site pertencem à Lytos e não podem ser copiados sem autorização por
-            escrito.</p>
-
-        <h2>4. Contratação de serviços</h2>
-        <p>Prazos, valores e garantias são definidos em proposta e contrato próprios, que prevalecem sobre as
-            informações do site.</p>
-
-        <h2>5. Responsabilidade</h2>
-        <p>Não garantimos que o site funcione sem interrupções e não nos responsabilizamos por falhas de internet,
-            serviços de terceiros ou links externos.</p>
-
-        <h2>6. Alterações</h2>
-        <p>Podemos atualizar estes termos. A versão atual fica sempre nesta página.</p>
-
-        <h2>7. Lei aplicável e contato</h2>
-        <p>Estes termos seguem as leis do Brasil. Dúvidas: <a
-                href="mailto:contato@lytos.com.br">contato@lytos.com.br</a>.</p>
+    <main class="layout">
+        <div class="hero">
+            <p class="eyebrow">Informações legais</p>
+            <h1>Termos de Uso</h1>
+            <p class="lead">Conheça as condições para utilizar este site e acessar as informações da Lytos. Última
+                atualização: 22 de outubro de 2026. Ao usar este site, você concorda com os termos
+                abaixo.</p>
+            <div class="hero-actions"><a class="button button-outline" href="suporte.html">Precisa de ajuda? <span
+                        aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="content-grid">
+            <nav class="sidebar" aria-label="Nesta página">
+                <p class="sidebar-label">Nesta página</p><a class="side-link" href="#sec-1">1. Sobre o site</a><a
+                    class="side-link" href="#sec-2">2. Uso permitido</a><a class="side-link" href="#sec-3">3.
+                    Propriedade intelectual</a><a class="side-link" href="#sec-4">4. Contratação de serviços</a><a
+                    class="side-link" href="#sec-5">5. Responsabilidade</a><a class="side-link" href="#sec-6">6.
+                    Alterações</a><a class="side-link" href="#sec-7">7. Lei aplicável e contato</a>
+            </nav>
+            <article class="article">
+                <section class="section" id="sec-1">
+                    <h2>1. Sobre o site</h2>
+                    <p>O site apresenta a Lytos e seus serviços. As informações são apenas informativas e não substituem
+                        uma
+                        proposta comercial.</p>
+                </section>
+                <section class="section" id="sec-2">
+                    <h2>2. Uso permitido</h2>
+                    <p>Você concorda em não:</p>
+                    <ul>
+                        <li>Violar leis ou direitos de terceiros.</li>
+                        <li>Tentar acessar áreas ou dados sem autorização.</li>
+                        <li>Prejudicar o funcionamento do site.</li>
+                        <li>Fornecer informações falsas nos formulários.</li>
+                    </ul>
+                </section>
+                <section class="section" id="sec-3">
+                    <h2>3. Propriedade intelectual</h2>
+                    <p>Marcas, logotipos, textos e imagens do site pertencem à Lytos e não podem ser copiados sem
+                        autorização por
+                        escrito.</p>
+                </section>
+                <section class="section" id="sec-4">
+                    <h2>4. Contratação de serviços</h2>
+                    <p>Prazos, valores e garantias são definidos em proposta e contrato próprios, que prevalecem sobre
+                        as
+                        informações do site.</p>
+                </section>
+                <section class="section" id="sec-5">
+                    <h2>5. Responsabilidade</h2>
+                    <p>Não garantimos que o site funcione sem interrupções e não nos responsabilizamos por falhas de
+                        internet,
+                        serviços de terceiros ou links externos.</p>
+                </section>
+                <section class="section" id="sec-6">
+                    <h2>6. Alterações</h2>
+                    <p>Podemos atualizar estes termos. A versão atual fica sempre nesta página.</p>
+                </section>
+                <section class="section" id="sec-7">
+                    <h2>7. Lei aplicável e contato</h2>
+                    <p>Estes termos seguem as leis do Brasil. Dúvidas: <a
+                            href="mailto:contato@lytos.com.br">contato@lytos.com.br</a>.</p>
+                </section>
+                <div class="next-links">
+                    <h2>Explore também</h2>
+                    <div class="link-row"><a class="button button-outline" href="privacidade.html">Privacidade</a><a
+                            class="button button-outline" href="suporte.html">Suporte</a></div>
+                </div>
+            </article>
+        </div>
     </main>
-
-    <footer>
-        © 2026 Lytos. Todos os direitos reservados
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="copyright">© 2026 Lytos. Todos os direitos reservados.</p>
+            <nav class="footer-links" aria-label="Links institucionais"><a href="privacidade.html">Privacidade</a><a
+                    href="termos.html" aria-current=page>Termos de uso</a><a href="suporte.html">Suporte</a></nav>
+        </div>
     </footer>
-
 </body>
 
 </html>
