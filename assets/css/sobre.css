@@ -38,4 +38,123 @@
   color: var(--texto-suave);
   line-height: 1.7;
   margin-top: 14px;
+
+/\* ==========================================
+ SEÇÃO CONTATO (#contato) 
+ ==========================================
+  \*/ /\* Grid container dividindo Informações e Formulário \*/ 
+  .contato-empresa {
+    display: grid; 
+    grid-template-columns: 1fr 1.2fr; 
+    gap: 40px; margin-top: 30px; 
+  } 
+  \* Bloco de Informações da Empresa \* 
+  
+  .contato-informacoes { 
+    background-color: rgba(4, 31, 42, 0.6); 
+    padding: 30px; 
+    border-radius: 8px; 
+    border: 1px solid rgba(0, 194, 168, 0.2); 
+  } 
+  
+  .contato-informacoes h3 { 
+    font: 700 clamp(18px, 3vw, 24px) "Space Grotesk", sans-serif; 
+    color: var(--verde, #00C2A8);
+     margin-bottom: 20px; } 
+     
+     .contato-informacoes p { 
+      color: var(--texto-suave); 
+      line-height: 1.6; 
+      margin-bottom: 14px; 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+    } 
+    
+    .contato-informacoes p i { 
+      color: var(--verde, #00C2A8);
+       font-size: 1.1rem; 
+       width: 20px; 
+       text-align: center; 
+      } 
+      
+      .contato-informacoes p strong { 
+        color: var(--texto, #E6FFFB); 
+        margin-right: 4px; 
+      } 
+      
+      \* Estrutura do Formulário \* 
+      .contato-formulario { 
+        display: flex; 
+        flex-direction: column; 
+      } 
+      
+      .formulario-contato { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 18px; 
+      } 
+      
+      .campo-grupo { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 6px; 
+      } 
+      
+      .campo-grupo label { 
+        color: var(--texto, #E6FFFB); 
+        font-size: 0.95rem; 
+        font-weight: 500; 
+      } 
+      
+      .campo-grupo input, .campo-grupo textarea { 
+        width: 100%; 
+        padding: 12px 14px; 
+        background-color: var(--fundo-escuro, #04141C); 
+        border: 1px solid rgba(0, 194, 168, 0.3); 
+        border-radius: 6px; color: var(--texto, #E6FFFB); 
+        font-family: inherit; font-size: 1rem; 
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+       } 
+       
+       .campo-grupo input:focus, .campo-grupo textarea:focus { 
+        outline: none; border-color: var(--verde, #00C2A8); 
+        box-shadow: 0 0 8px rgba(0, 194, 168, 0.3); 
+      } 
+      
+      \* Exibição das Mensagens de Erro \* 
+      .erro, .mensagem-erro { color: #ff6b6b; 
+        font-size: 0.85rem; 
+        min-height: 18px; 
+        display: block; 
+      } 
+      
+      \* Botão Enviar \*/ 
+      .botao-enviar { 
+        background-color: var(--verde, #00C2A8); 
+        color: var(--fundo-escuro, #04141C); 
+        font-weight: 700; padding: 12px 28px; 
+        border: none; border-radius: 6px; 
+        cursor: pointer; font-size: 1rem; 
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+        align-self: flex-start; 
+      } 
+      
+      .botao-enviar:hover { 
+        background-color: var(--verde-claro, #00E5C8); 
+        transform: translateY(-2px); 
+      } 
+      
+      .feedback-form { 
+        margin-top: 10px; 
+        font-weight: 600; 
+        font-size: 0.95rem; 
+      } 
+      
+      \* Adaptabilidade para Telas Menores (Responsividade) \* 
+      @media (max-width: 850px) { 
+        .contato-empresa { 
+          grid-template-columns: 1fr; 
+        } 
+      }
 }
