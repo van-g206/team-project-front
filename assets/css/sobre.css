@@ -1,160 +1,266 @@
+
+/* ==========================================================================
+   ESTILOS DE ESTRUTURA E SEÇÕES
+   ========================================================================== */
+
 .container {
-  padding: 75px 6%;
-}
-.sobre-proposta h2 {
-  font-family: arial, sans-serif;
-  color: #00C2A8;
-  font: 700 clamp(20px,4vw,32px) "Space Grotesk",sans-serif;
-  margin-top: 12px;
+    padding: 75px 6%;
 }
 
-.sobre-proposta p{
-  color: var(--texto-suave);
-  line-height: 1.7;
-  margin-top: 14px;
+/* Espaçamento lateral das seções */
+.sobre-proposta,
+.sobre-empresa,
+.sobre-missao,
+.nossa-missao,
+.contato-cabecalho,
+.contato-empresa {
+    padding-left: clamp(20px, 4%, 60px);
+    padding-right: clamp(20px, 4%, 60px);
 }
 
-.sobre-empresa h2 {
-  font-family: arial, sans-serif;
-  color: #00C2A8;
-  font: 700 clamp(20px,4vw,32px) "Space Grotesk",sans-serif;
-  margin-top: 12px;
+/* Títulos das seções */
+
+.sobre-proposta h2,
+.sobre-empresa h2,
+.sobre-missao h2,
+.nossa-missao h2,
+.contato-empresa h2, 
+.contato-cabecalho h2 {
+    font: 700 clamp(28px, 4vw, 24px) "Space Grotesk", sans-serif;
+    color: var(--verde-claro);
+    margin-top: 10px;
 }
 
-.sobre-empresa p{
-  color: var(--texto-suave);
-  line-height: 1.7;
-  margin-top: 14px;
+/* Textos das seções */
+
+.sobre-proposta p,
+.sobre-empresa p,
+.sobre-missao p,
+.nossa-missao p,
+.contato-cabecalho p {
+    color: var(--texto-suave);
+    font-family: "Inter", sans-serif;
+    font-size: clamp(15px, 1.5vw, 14px);
+    font-weight: 400;
+    line-height: 1.7;
+    margin-top: 14px;
 }
 
-.sobre-missao h2 {
-  font-family: arial, sans-serif;
-  color: #00C2A8;
-  font: 700 clamp(20px,4vw,32px) "Space Grotesk",sans-serif;
-  margin-top: 12px;
+/* ==========================================================================
+   LAYOUT PRINCIPAL DE CONTATO: GRID RESPONSIVO
+   ========================================================================== */
+
+.contato-empresa {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    margin-top: 30px;
+    width: 100%;
 }
 
-.sobre-missao p{
-  color: var(--texto-suave);
-  line-height: 1.7;
-  margin-top: 14px;
+/* ==========================================================================
+   BLOCO DE INFORMAÇÕES INSTITUCIONAIS
+   ========================================================================== */
 
-/\* ==========================================
- SEÇÃO CONTATO (#contato) 
- ==========================================
-  \*/ /\* Grid container dividindo Informações e Formulário \*/ 
-  .contato-empresa {
-    display: grid; 
-    grid-template-columns: 1fr 1.2fr; 
-    gap: 40px; margin-top: 30px; 
-  } 
-  \* Bloco de Informações da Empresa \* 
-  
-  .contato-informacoes { 
-    background-color: rgba(4, 31, 42, 0.6); 
-    padding: 30px; 
-    border-radius: 8px; 
-    border: 1px solid rgba(0, 194, 168, 0.2); 
-  } 
-  
-  .contato-informacoes h3 { 
-    font: 700 clamp(18px, 3vw, 24px) "Space Grotesk", sans-serif; 
-    color: var(--verde, #00C2A8);
-     margin-bottom: 20px; } 
-     
-     .contato-informacoes p { 
-      color: var(--texto-suave); 
-      line-height: 1.6; 
-      margin-bottom: 14px; 
-      display: flex; 
-      align-items: center; 
-      gap: 12px; 
-    } 
-    
-    .contato-informacoes p i { 
-      color: var(--verde, #00C2A8);
-       font-size: 1.1rem; 
-       width: 20px; 
-       text-align: center; 
-      } 
-      
-      .contato-informacoes p strong { 
-        color: var(--texto, #E6FFFB); 
-        margin-right: 4px; 
-      } 
-      
-      \* Estrutura do Formulário \* 
-      .contato-formulario { 
-        display: flex; 
-        flex-direction: column; 
-      } 
-      
-      .formulario-contato { 
-        display: flex; 
-        flex-direction: column; 
-        gap: 18px; 
-      } 
-      
-      .campo-grupo { 
-        display: flex; 
-        flex-direction: column; 
-        gap: 6px; 
-      } 
-      
-      .campo-grupo label { 
-        color: var(--texto, #E6FFFB); 
-        font-size: 0.95rem; 
-        font-weight: 500; 
-      } 
-      
-      .campo-grupo input, .campo-grupo textarea { 
-        width: 100%; 
-        padding: 12px 14px; 
-        background-color: var(--fundo-escuro, #04141C); 
-        border: 1px solid rgba(0, 194, 168, 0.3); 
-        border-radius: 6px; color: var(--texto, #E6FFFB); 
-        font-family: inherit; font-size: 1rem; 
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-       } 
-       
-       .campo-grupo input:focus, .campo-grupo textarea:focus { 
-        outline: none; border-color: var(--verde, #00C2A8); 
-        box-shadow: 0 0 8px rgba(0, 194, 168, 0.3); 
-      } 
-      
-      \* Exibição das Mensagens de Erro \* 
-      .erro, .mensagem-erro { color: #ff6b6b; 
-        font-size: 0.85rem; 
-        min-height: 18px; 
-        display: block; 
-      } 
-      
-      \* Botão Enviar \*/ 
-      .botao-enviar { 
-        background-color: var(--verde, #00C2A8); 
-        color: var(--fundo-escuro, #04141C); 
-        font-weight: 700; padding: 12px 28px; 
-        border: none; border-radius: 6px; 
-        cursor: pointer; font-size: 1rem; 
-        transition: background-color 0.3s ease, transform 0.2s ease; 
-        align-self: flex-start; 
-      } 
-      
-      .botao-enviar:hover { 
-        background-color: var(--verde-claro, #00E5C8); 
-        transform: translateY(-2px); 
-      } 
-      
-      .feedback-form { 
-        margin-top: 10px; 
-        font-weight: 600; 
-        font-size: 0.95rem; 
-      } 
-      
-      \* Adaptabilidade para Telas Menores (Responsividade) \* 
-      @media (max-width: 850px) { 
-        .contato-empresa { 
-          grid-template-columns: 1fr; 
-        } 
-      }
+.contato-informacoes {
+    background-color: rgba(4, 31, 42, 0.6);
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 194, 168, 0.4);
+}
+
+.contato-informacoes h2 {
+    font: 700 clamp(20px, 3vw, 26px) "Space Grotesk", sans-serif;
+    color: var(--verde-claro);
+    margin-bottom: 20px;
+}
+
+.contato-informacoes p {
+    color: var(--texto-suave);
+    font-family: "Inter", sans-serif;
+    font-size: clamp(14px, 1.3vw, 16px);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contato-informacoes p i {
+    color: var(--verde-claro);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.contato-informacoes p strong {
+    color: var(--texto);
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+/* ==========================================================================
+   ESTRUTURA GERAL DO FORMULÁRIO
+   ========================================================================== */
+
+.contato-formulario {
+    width: 100%;
+}
+
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.campo-grupo label {
+    color: var(--texto);
+    font-family: "Inter", sans-serif;
+    font-size: clamp(14px, 1.3vw, 16px);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   PADRONIZAÇÃO E RESPONSIVIDADE DOS CAMPOS DE ESCRITA
+   ========================================================================== */
+
+.campo-grupo input[type="text"],
+.campo-grupo input[type="email"],
+.campo-grupo textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    background-color: var(--fundo-escuro);
+    border: 1px solid rgba(0, 194, 168, 0.3);
+    border-radius: 8px;
+    color: var(--texto);
+    font-family: "Inter", sans-serif;
+    font-size: clamp(14px, 1.3vw, 16px);
+    font-weight: 400;
+    line-height: 1.5;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Campo de Texto Multilinha (Textarea) */
+
+.campo-grupo textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* ==========================================================================
+   ESTADO DE FOCO PADRONIZADO
+   ========================================================================== */
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+    outline: none;
+    border-color: var(--verde-claro);
+    box-shadow: 0 0 12px rgba(0, 194, 168, 0.3);
+}
+
+/* ==========================================================================
+   PLACEHOLDER PADRONIZADO
+   ========================================================================== */
+
+.campo-grupo input::placeholder,
+.campo-grupo textarea::placeholder {
+    color: var(--texto-suave);
+    opacity: 0.5;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   MENSAGENS DE ERRO DE VALIDAÇÃO
+   ========================================================================== */
+
+.erro,
+.mensagem-erro {
+    color: #ff6b6b;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    min-height: 18px;
+    display: block;
+}
+
+/* ==========================================================================
+   BOTÃO ENVIAR
+   ========================================================================== */
+
+.botao-enviar {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde);
+    color: var(--fundo-escuro);
+    min-height: 52px;
+}
+
+
+/* ==========================================================================
+   CARDS DAS SEÇÕES: EFEITO DE BORDA E SOMBRA VERDE
+   ========================================================================== */
+
+.sobre-proposta,
+.sobre-empresa,
+.sobre-missao,
+.nossa-missao,
+.sobre-diferenciais,
+.contato-cabecalho {
+    padding: 28px 32px;
+    margin-bottom: 30px;
+
+    background-color: rgba(4, 20, 28, 0.65);
+
+    border: 1px solid rgba(0, 194, 168, 0.45);
+    border-radius: 16px;
+
+    box-shadow: 0 0 14px rgba(0, 194, 168, 0.12);
+
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+.sobre-proposta:hover,
+.sobre-empresa:hover,
+.sobre-missao:hover,
+.nossa-missao:hover,
+.sobre-diferenciais:hover,
+.contato-cabecalho:hover,
+.contato-informacoes:hover {
+    border-color: var(--verde-claro);
+    box-shadow: 0 0 20px rgba(0, 194, 168, 0.22);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE DOS CARDS
+   ========================================================================== */
+
+@media (max-width: 850px) {
+    .sobre-proposta,
+    .sobre-empresa,
+    .sobre-missao,
+    .nossa-missao,
+    .sobre-diferenciais,
+    .contato-cabecalho,
+    .contato-informacoes {
+        padding: 22px 20px;
+        margin-bottom: 24px;
+    }
 }
