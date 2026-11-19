@@ -1,4 +1,111 @@
-.sobre-cabecalho h2 {
-  font-family: arial, sans-serif;
-  color: #00C2A8;
+#sobre {
+  padding: 75px 6%;
+}
+
+#sobre .container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.sobre-cabecalho,
+.sobre-empresa,
+.nossa-missao {
+  padding: 32px 36px;
+  border: 1px solid rgba(0, 194, 168, .35);
+  border-left: 3px solid var(--verde);
+  border-radius: 18px;
+  background: linear-gradient(120deg, rgba(0, 194, 168, .09), rgba(4, 20, 28, .45));
+}
+
+.sobre-cabecalho h2,
+.sobre-empresa h2,
+.nossa-missao h2 {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--texto);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+.sobre-cabecalho h2,
+.sobre-empresa h2,
+.nossa-missao h2 {
+  color: var(--verde-claro);
+}
+
+.sobre-cabecalho p,
+.sobre-empresa p,
+.nossa-missao p {
+  color: var(--texto-suave);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.sobre-cabecalho strong {
+  color: var(--texto);
+}
+
+.sobre-empresa,
+.nossa-missao {
+  display: grid;
+  grid-template-columns: minmax(190px, .7fr) minmax(0, 1.3fr);
+  gap: 36px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.sobre-empresa h2,
+.nossa-missao h2 {
+  margin: 0;
+  font-size: clamp(22px, 2.5vw, 30px);
+}
+
+.sobre-empresa p,
+.nossa-missao p {
+  max-width: 760px;
+}
+
+#sobre .container > br {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #sobre {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .sobre-cabecalho {
+    padding: 26px 24px;
+  }
+
+  .sobre-empresa,
+  .nossa-missao {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 26px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #sobre {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .sobre-cabecalho {
+    padding: 22px 18px;
+  }
+
+  .sobre-empresa,
+  .nossa-missao {
+    padding: 22px 18px;
+  }
+
+  .sobre-cabecalho p,
+  .sobre-empresa p,
+  .nossa-missao p {
+    font-size: 15px;
+  }
 }
