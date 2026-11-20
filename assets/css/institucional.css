@@ -44,18 +44,81 @@ button:focus-visible {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
     background: rgba(4, 20, 28, .95);
-    border-bottom: 1px solid var(--line)
+    border-bottom: 1px solid var(--line);
 }
 
-.topbar {
-    max-width: 1100px;
+.cabecalho-conteudo {
+    max-width: 1320px;
     margin: auto;
-    padding: 17px 24px;
+    padding: 0 5%;
+}
+
+.cabecalho-conteudo nav {
+    min-height: 76px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px
+    gap: 28px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo {
+  display: block;
+  width: 150px;
+  height: 54px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.links-navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-left: auto;
+}
+
+.links-navegacao a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.links-navegacao a:hover {
+    color: var(--accent-light);
+}
+
+.botao-entrar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 96px;
+    height: 40px;
+    border-radius: 24px;
+    background: var(--accent);
+    color: var(--deep);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.botao-menu {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(0, 194, 168, .3);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
 }
 
 .brand {
@@ -350,6 +413,52 @@ h1 span {
 }
 
 @media(max-width:750px) {
+    .cabecalho-conteudo nav {
+        flex-wrap: wrap;
+        min-height: 70px;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 125px;
+        height: 46px;
+    }
+
+    .botao-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .botao-entrar {
+        order: 2;
+        min-width: 78px;
+        height: 38px;
+    }
+
+    .links-navegacao {
+        display: none;
+        order: 3;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 8px 0 18px;
+    }
+
+    .links-navegacao.aberto {
+        display: flex;
+    }
+
+    .links-navegacao a {
+        padding: 13px 8px;
+        border-top: 1px solid rgba(164, 188, 190, .07);
+    }
+
+    .links-navegacao a:first-child {
+        border-top: 0;
+    }
+
     .layout {
         padding: 36px 20px 65px
     }
